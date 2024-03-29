@@ -100,3 +100,7 @@ correctly. Run the below command again and then run the image
  xhost +local:root
  sudo docker run -it --rm -e DISPLAY=${DISPLAY} -v 
 /tmp/.X11-unix:/tmp/.X11-unix my_roomba_controller_image
+```
+
+## Results
+![Video Demo](https://github.com/vijaydevmasters/my_roomba_controller/blob/main/docker_creddy_roomba-2024-03-03_12.31.19.gif)
