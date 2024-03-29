@@ -71,27 +71,32 @@ sudo docker pull vijaydevmasters/my_roomba_controller_image:creddy_hw3
 sudo docker run -it --rm -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-
 unix my_roomba_controller_image
 ```
-```sh
+
 If gazebo is not opening then the access to the host's X server was not setup 
 correctly. Run the below command again and then run the image
+```sh
  xhost +local:root
  sudo docker run -it --rm -e DISPLAY=${DISPLAY} -v 
 /tmp/.X11-unix:/tmp/.X11-unix my_roomba_controller_image
 ```
 WAY2: Load the Docker image: my_roomba_controller_image.tar and run the image
-```sh
+
 #Copy the file "my_roomba_controller_image.tar" that I provided in ~/ros2_ws
 #Load the image using my_roomba_controller_image.tar that is provided by me(Make 
 sure that the .tar file is in the directory where you are at present before running
 the below command)
+```sh
  sudo docker load < my_roomba_controller_image.tar
+```
 Run the docker image
+```sh
  sudo docker run -it --rm -e DISPLAY=${DISPLAY} -v 
 /tmp/.X11-unix:/tmp/.X11-unix my_roomba_controller_image
 ```
-```sh
+
 If gazebo is not opening then the access to the host's X server was not setup 
 correctly. Run the below command again and then run the image
+```sh
  xhost +local:root
  sudo docker run -it --rm -e DISPLAY=${DISPLAY} -v 
 /tmp/.X11-unix:/tmp/.X11-unix my_roomba_controller_image
